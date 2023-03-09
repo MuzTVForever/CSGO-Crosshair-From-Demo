@@ -1,4 +1,4 @@
-![Logo](source/images/logo.png?s=64)   
+![Logo](https://imgur.com/a/cjxZGIs?w=64)   
 # CSGO Crosshairs from Demo (v1)
 -What is that?
 
