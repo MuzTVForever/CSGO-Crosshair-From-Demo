@@ -29,11 +29,11 @@ let Parser = (function () {
         objDemo.parse(buffer);
     };
 
-    let eventServerSpawn = (ev) => {
-        intMaxPlayers = ev.maxplayers;
+    let eventServerSpawn = (event) => {
+        intMaxPlayers = event.maxplayers;
     };
 
-    let eventRoundStart = (ev) => {
+    let eventRoundStart = () => {
         if (objDemo.header.networkProtocol < 13748) {
             objDemo.cancel();
             alert("Error! The demo was not parsed because the demo is very old!\n\nSorry about that.");
@@ -95,7 +95,7 @@ let Parser = (function () {
 			$("#loader").css("display", "none");
 		}
 	};
-	let CopyCrosshairCode = async (ev) => {
+	let CopyCrosshairCode = async (event) => {
 		let access = await navigator.permissions.query({
 			name: "clipboard-write"
 		});
@@ -106,7 +106,7 @@ let Parser = (function () {
 			return;
 		}
 
-		let element = $(ev.target);
+		let element = $(event.target);
 		let crossCode = element.text();
 		await navigator.clipboard.writeText(crossCode);
 		element.popover("show");

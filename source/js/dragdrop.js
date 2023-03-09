@@ -10,18 +10,18 @@ const DragAndDrop = (function () {
     FinishedCB = finishedCallback;
   };
 
-  const preventDefault = (ev) => {
-    ev.stopPropagation();
-    ev.preventDefault();
+  const preventDefault = (event) => {
+    event.stopPropagation();
+    event.preventDefault();
     return false;
   };
 
-  const getFile = (ev) => {
+  const getFile = (event) => {
     if (!LoadingCB || !FinishedCB) {
       return false;
     }
 
-    const files = ev.dataTransfer.files;
+    const files = event.dataTransfer.files;
     if (!files || files.length <= 0) {
       return false;
     }
