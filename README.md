@@ -1,4 +1,4 @@
-# CSGO Crosshairs from Demo (v1)
+![Logo](source/images/logo.png)   # CSGO Crosshairs from Demo (v1)
 -What is that?
 
 -This is a solution that will help you get the crosshair codes (CSGO-00000-00000-00000-00000-00000) of all players in a match using a demo file (.dem)!
