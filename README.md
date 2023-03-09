@@ -1,3 +1,6 @@
+<img src="source/images/logo-git.png" align="center">
+
+
 # CSGO Crosshairs from Demo (v1)
 -What is that?
 
@@ -5,7 +8,7 @@
 Just Drag&Drop .dem file, select crosshair code and press on to copy it .
 
 If something goes wrong, just reload the page :D
-![Logo](source/images/logo-git.png) 
+
  
 
 
