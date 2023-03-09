@@ -1,7 +1,7 @@
 const dropArea = document.getElementById('fileDropBox');
 const dropArea2 = document.getElementById('fileDropBox-2');
 
-const DragNDrop = (function () {
+const DragAndDrop = (function () {
   let LoadingCB = null;
   let FinishedCB = null;
 
@@ -10,13 +10,13 @@ const DragNDrop = (function () {
     FinishedCB = finishedCallback;
   };
 
-  const _PreventDefault = (ev) => {
+  const preventDefault = (ev) => {
     ev.stopPropagation();
     ev.preventDefault();
     return false;
   };
 
-  const _GetFile = (ev) => {
+  const getFile = (ev) => {
     if (!LoadingCB || !FinishedCB) {
       return false;
     }
@@ -34,16 +34,16 @@ const DragNDrop = (function () {
 
   return {
     Init: _Init,
-    PreventDefault: _PreventDefault,
-    GetFile: _GetFile,
+    PreventDefault: preventDefault,
+    GetFile: getFile,
   };
 })();
 
 (function () {
   ['drop', 'dragover', 'dragleave'].forEach((eventName) => {
-    dropArea.addEventListener(eventName, DragNDrop.PreventDefault);
-	dropArea2.addEventListener(eventName, DragNDrop.PreventDefault);
+    dropArea.addEventListener(eventName, DragAndDrop.PreventDefault);
+	dropArea2.addEventListener(eventName, DragAndDrop.PreventDefault);
   });
-  dropArea.addEventListener('drop', DragNDrop.GetFile);
-  dropArea2.addEventListener('drop', DragNDrop.GetFile);
+  dropArea.addEventListener('drop', DragAndDrop.GetFile);
+  dropArea2.addEventListener('drop', DragAndDrop.GetFile);
 })();

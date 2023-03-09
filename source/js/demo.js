@@ -5,8 +5,7 @@ let Parser = (function () {
     let objDemo = null;
 
     let _Init = function () {
-        DragNDrop.Init(FileLoading, FileLoaded);
-        console.log("LOG: FILE WAS LOADED!");
+        DragAndDrop.Init(FileLoading, FileLoaded);
     };
 
     let FileLoading = (file) => {
@@ -103,6 +102,7 @@ let Parser = (function () {
 
 		if (access.state === "denied") {
 			alert("Cannot copy crosshair code due to browser restrictions.");
+            console.log("Cannot copy crosshair code due to browser restrictions.");
 			return;
 		}
 
