@@ -55,3 +55,15 @@ body {
 .dnd {
 	font-size: 6.0vh;
 }
+
+.notifyjs-bootstrap-success {
+	color: #242424 !important; 
+	background-color: #fdba00 !important;
+	border-color: transparent !important;
+	background-image: none !important; 
+}
+
+.notifyjs-bootstrap-base {
+	text-shadow: none !important;
+	padding: 8px 15px 8px 14px !important;
+}

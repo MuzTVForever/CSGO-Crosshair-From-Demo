@@ -1,6 +1,9 @@
+.old {
+    --ponto: #5628ee;
+}
 .carregamento {
     --linhaNormal: #2f3545;
-    --ponto: #5628ee;
+    --ponto: #fdba00;
     --duracao: 3s;
     width: 44px;
     height: 44px;

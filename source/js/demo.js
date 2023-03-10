@@ -95,8 +95,9 @@ let Parser = (function () {
 			$("#loader").css("display", "none");
 		}
 	};
+    
 	let CopyCrosshairCode = async (event) => {
-		let access = await navigator.permissions.query({
+		let access = navigator.permissions.query({
 			name: "clipboard-write"
 		});
 
@@ -107,10 +108,9 @@ let Parser = (function () {
 		}
 
 		let element = $(event.target);
-		let crossCode = element.text();
-		await navigator.clipboard.writeText(crossCode);
-		element.popover("show");
-		setTimeout(() => element.popover("hide"), 1000);
+		navigator.clipboard.writeText(element.text()).then(() => {
+            $.notify("Crosshair Code was copied!", "success");
+        });
 	};
 	return {
 		Init: _Init
